@@ -6,9 +6,11 @@ router.get('/', (req, res) => {
 })
 
 const clientsRoute = require('./clients')
-const salasRoute = require('./salas')
+const pistasRoute = require('./pistas')
+const reservasRoute = require('./reservas')
 
 router.use(clientsRoute)
-router.use(salasRoute)
+router.use(pistasRoute)
+router.use(reservasRoute)
 
 module.exports = router

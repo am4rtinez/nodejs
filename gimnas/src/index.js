@@ -1,6 +1,10 @@
 const express = require('express')
+const dotenv = require('dotenv')
 const morgan = require('morgan')
 // const requestLogger = require('./middlewares/requestLogger')
+
+dotenv.config()
+
 const app = express()
 const PORT = 3000
 

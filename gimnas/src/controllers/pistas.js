@@ -1,8 +1,8 @@
 const pool = require('../helpers/database')
 
-const getClients = async (req, res, next) => {
+const getPistas = async (req, res, next) => {
 	try {
-		const sql = 'SELECT * FROM clients'
+		const sql = 'SELECT * FROM pistes'
 		const rows = await pool.query(sql)
 		res.status(200).json(rows)
 	} catch (err){
@@ -14,9 +14,9 @@ const getClients = async (req, res, next) => {
 	}
 }
 
-const getClientId = async (req, res, next) => {
+const getPistasId = async (req, res, next) => {
 	try {
-		const sql = `SELECT * FROM clients WHERE id = ${req.params.id}`
+		const sql = `SELECT * FROM pistes WHERE id = ${req.params.id}`
 		const row = await pool.query(sql)
 		if (row.length > 0) {
 			res.status(200).json(row)
@@ -32,4 +32,4 @@ const getClientId = async (req, res, next) => {
 	}
 }
 
-module.exports = { getClients, getClientId }
+module.exports = { getPistas, getPistasId }
