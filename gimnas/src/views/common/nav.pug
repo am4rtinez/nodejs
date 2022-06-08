@@ -1,0 +1,16 @@
+mixin nav(nav)
+	nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+		div.container-fluid
+			button.navbar-toggler(type='button' 
+			data-bs-toggle='collapse' 
+			data-bs-target='#navbarNav' 
+			aria-controls='navbarNav' 
+			aria-expanded='false' 
+			aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			div.collapse.navbar-collapse#navbarNav
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(class=(name === "home" ? "active" : undefined) href='/') Home
+					li.nav-item
+						a.nav-link(class=(name === "api" ? "active" : undefined) href='/api') API

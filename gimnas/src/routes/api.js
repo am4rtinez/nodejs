@@ -2,7 +2,7 @@ const { Router } = require('express')		// Importa el metodo router de express.
 const router = Router()		// Ejecutamos el router.
 
 router.get('/', (req, res) => {
-	res.send('<h1>API REST Gimnas</h1>')
+	res.render('api.pug', { title: 'API REST Gimnas', message: 'Hello there!', name: 'api' });
 })
 
 const clientsRoute = require('./clients')

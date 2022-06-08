@@ -1,12 +1,38 @@
+html,
 body {
+    height: 100%;
+}
+
+/* body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+} */
+
+body {
+	/* background-color: grey; */
+	/* font: "Lucida Grande", Helvetica, Arial, sans-serif; */
+	margin: auto;
+	background-color: #fff;
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
 }
 
-h1 {
+header {
 	background-color: burlywood;
+	padding: 2em;
+}
+
+main {
+	margin: auto;
+	padding: 2em;
+}
+
+td {
+	width: 33%;
+	padding: 0 3em;
+}
+
+td, th {
+  padding: 0.5rem;
 }

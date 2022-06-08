@@ -1,0 +1,39 @@
+extends layout
+
+block content
+	- var name = 'api'
+	div.container.h-90
+		table.table.table-striped.table-responsive.align-middle
+			thead.text-center
+				tr.table-dark
+					th Ruta consulta
+					th Metodo 
+					th Descripcion
+			tbody.table-hover
+				tr
+					td 
+						a(href='/api/clients') /api/clients
+					td.text-center GET 
+					td Obtenemos los datos de todos los clientes
+				tr 
+					td /api/clients/:id
+					td.text-center GET 
+					td Obtenemos los datos de un cliente
+				tr 
+					td
+						a(href='/api/pistas') /api/pistas
+					td.text-center GET 
+					td Obtenemos los datos de todas las pistas
+				tr 
+					td /api/pistas/:id
+					td.text-center GET 
+					td Obtenemos los datos de una pista
+				tr 
+					td
+						a(href='/api/reservas') /api/reservas
+					td.text-center GET 
+					td Obtenemos los datos de todas las reservas realizadas
+				tr 
+					td /api/pistas/:id
+					td.text-center GET 
+					td Obtenemos los datos de una reserva a partir del idclient

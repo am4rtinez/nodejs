@@ -3,7 +3,7 @@ const router = Router()		// Ejecutamos el router.
 
 // Generacion de las rutas.
 router.get('/', (req, res) => {
-	res.render('index.pug', { title: 'Gimnas NODE JS', message: 'Hello there!'});
+	res.render('index.pug', { title: 'Gimnas NODE JS', message: 'Hello there!', name: 'home'});
 })
 
 module.exports = router

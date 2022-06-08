@@ -3,8 +3,8 @@ const pool = require('../helpers/database')
 const getReservas = async (req, res, next) => {
 	try {
 		const sql = 'SELECT * FROM reserves'
-		const rows = await pool.query(sql)
-		res.status(200).json(rows)
+		const result = await pool.query(sql)
+		res.status(200).json(result)
 	} catch (err){
 		res.status(400).send({
 			message: err.text,
@@ -17,9 +17,9 @@ const getReservas = async (req, res, next) => {
 const getReservasUserId = async (req, res, next) => {
 	try {
 		const sql = `SELECT * FROM reserves WHERE idclient = ${req.params.id}`
-		const row = await pool.query(sql)
-		if (row.length > 0) {
-			res.status(200).json(row)
+		const result = await pool.query(sql)
+		if (result.length > 0) {
+			res.status(200).json(result)
 		} else {
 			res.status(400).send({ message : 'No Data Found' }).end()
 		}
