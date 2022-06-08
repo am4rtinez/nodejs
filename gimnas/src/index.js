@@ -1,4 +1,5 @@
 const express = require('express')
+var path = require('path');
 const dotenv = require('dotenv')
 const morgan = require('morgan')
 // const requestLogger = require('./middlewares/requestLogger')
@@ -8,16 +9,21 @@ dotenv.config()
 const app = express()
 const PORT = 3000
 
-const routes = require('./routes/index')
-const apiRoutes = require('./routes/api')
-// const clientsRoute = require('./routes/clients')
+const routes = require('./routes/index')		// Rutas para las vistas.
+const apiRoutes = require('./routes/api')		// Rutas de la api.
 
 const unknownEndpoint = (req, res) => {
-	res.status(404).send({ error: 'unknown endpoint' })
+	const error = { status: 404, message: 'Unknown endpoint' }
+	res.render('error.pug', { error });
+	// res.status(404).send({ error: 'unknown endpoint' })
 }
 
 // Settings
 app.set('port', process.env.PORT || PORT)
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Middlewares
 app.use(express.json())
