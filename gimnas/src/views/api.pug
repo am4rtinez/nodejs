@@ -16,7 +16,8 @@ block content
 					td.text-center GET 
 					td Obtenemos los datos de todos los clientes
 				tr 
-					td /api/clients/:id
+					td
+						a(href='/api/clients/1') /api/clients/:id
 					td.text-center GET 
 					td Obtenemos los datos de un cliente
 				tr 
@@ -25,7 +26,8 @@ block content
 					td.text-center GET 
 					td Obtenemos los datos de todas las pistas
 				tr 
-					td /api/pistas/:id
+					td 
+						a(href='/api/pistas/1') /api/pistas/:id
 					td.text-center GET 
 					td Obtenemos los datos de una pista
 				tr 
@@ -34,6 +36,7 @@ block content
 					td.text-center GET 
 					td Obtenemos los datos de todas las reservas realizadas
 				tr 
-					td /api/pistas/:id
+					td
+						a(href='/api/reservas/client/1') /api/reservas/client/:id
 					td.text-center GET 
 					td Obtenemos los datos de una reserva a partir del idclient

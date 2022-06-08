@@ -6,6 +6,6 @@ const reservasController = require('../controllers/reservas');
 router.get('/reservas', reservasController.getReservas)
 
 // Devuelve la sala a partir de su id.
-router.get('/reservas/:id', reservasController.getReservasUserId)
+router.get('/reservas/client/:id', reservasController.getReservasUserId)
 
 module.exports = router
