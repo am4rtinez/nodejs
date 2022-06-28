@@ -50,12 +50,13 @@
 		text-decoration: none;
 	}
 	.link:hover {
-		background-color: var(--sidebar-item-hover);
+		background-color: var(--sidebar-bg-item-hover);
+		color: var(--sidebar-color-item-hover);
 	}
 	.link.active {
 		background-color: var(--sidebar-item-active);
 		/* background-color: red; */
-		color: var(--sidebar-bg-color);
+		color: var(--sidebar-bg);
 	}
 	.link .icon {
 		flex-shrink: 0;
