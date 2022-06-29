@@ -18,9 +18,10 @@
 		</h1>
 		<h3>Menu</h3>
 		<SidebarLink to="/" icon="fa-solid fa-home">Home</SidebarLink>
-		<SidebarLink to="/dashboard" icon="fa-solid fa-columns">Dashboard</SidebarLink>
+		<SidebarLink to="/dashboard" icon="fa-solid fa-table">Dashboard</SidebarLink>
 		<SidebarLink to="/about" icon="fa-solid fa-chart-bar">About</SidebarLink>
 		<SidebarLink to="/contact" icon="fa-solid fa-envelope">Contacto</SidebarLink>
+		<SidebarLink to="/map" icon="fa-solid fa-map-marked-alt">Mapa</SidebarLink>
 
 		<span class="collapse-icon" :class="{ 'rotate-180' : collapsed }" @click="toggleSidebar"> 
 			<fa icon="fa-solid fa-angle-double-left" />
